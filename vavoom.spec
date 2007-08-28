@@ -64,7 +64,6 @@ Exec=vavoom
 Icon=arcade_section.png
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=Game;ArcadeGame;
 EOF
 
