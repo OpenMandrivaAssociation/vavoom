@@ -61,7 +61,7 @@ cat << EOF > %{name}.desktop
 Name=Freedoom
 Comment=Freedoom with the Vavoom engine
 Exec=vavoom
-Icon=arcade_section.png
+Icon=arcade_section
 Terminal=false
 Type=Application
 Categories=Game;ArcadeGame;
