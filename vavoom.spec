@@ -15,6 +15,7 @@ Patch3:		vavoom-missing_animated.lmp.patch
 URL:		http://vavoom-engine.com/
 Group:		Games/Arcade
 License:	GPL
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel SDL_mixer-devel SDL_net-devel libpng-devel allegro-devel
 BuildRequires:	oggvorbis-devel libmad-devel openal-devel libmikmod-devel
 BuildRequires:	autoconf desktop-file-utils mesagl-devel libjpeg-devel
