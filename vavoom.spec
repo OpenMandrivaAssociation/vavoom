@@ -1,6 +1,6 @@
 %define	name	vavoom
 %define	version	1.22.1
-%define	release %mkrel 3
+%define	release %mkrel 4
 %define	Summary	Open source port of the DOOM game engine
 
 Summary:	%{Summary}
