@@ -1,6 +1,6 @@
 %define	name	vavoom
-%define	version	1.22.1
-%define	release %mkrel 5
+%define	version	1.28
+%define	release %mkrel 1
 %define	Summary	Open source port of the DOOM game engine
 
 Summary:	%{Summary}
@@ -11,15 +11,15 @@ Source0:	http://dl.sourceforge.net/vavoom/%{name}-%{version}.tar.bz2
 #Patch0:		vavoom-1.20-openal-fix.patch
 #Patch1:		vavoom-1.21-x86_64.patch
 Patch2:		vavoom-c_linkage.patch
-Patch3:		vavoom-missing_animated.lmp.patch
-Patch4:		vavoom-1.22.1-new-mikmod.patch
+#Patch3:		vavoom-missing_animated.lmp.patch
+Patch4:		vavoom-1.28-new-mikmod.patch
 URL:		http://vavoom-engine.com/
 Group:		Games/Arcade
 License:	GPLv2+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel SDL_mixer-devel SDL_net-devel libpng-devel allegro-devel
 BuildRequires:	oggvorbis-devel libmad-devel openal-devel libmikmod-devel
-BuildRequires:	autoconf desktop-file-utils mesagl-devel libjpeg-devel
+BuildRequires:	desktop-file-utils mesagl-devel libjpeg-devel
 Enhances:	vavoom-vmdl TiMidity++
 
 %description
@@ -32,20 +32,18 @@ and freelook support.
 #%patch0 -p0 -b .openal
 #%patch1 -p1 -b .64bit
 %patch2 -p1 -b .linkage
-%patch3 -p1 -b .ani
+#%patch3 -p1 -b .ani
 %patch4 -p1
-rm configure
-autoconf
+#rm configure
+#autoconf
 
 %build
-%configure	--bindir=%{_gamesbindir} \
-		--datadir=%{_gamesdatadir} \
-		--with-opengl \
-		--with-openal \
-		--with-vorbis \
-		--with-libmad \
-		--with-mikmod \
-		--without-allegro
+cmake . -DCMAKE_INSTALL_PREFIX=%{_gamesbindir} \
+      -DDATADIR=%{_gamesdatadir} \
+      -DWITH_SDL=Y \
+      -DWITH_OPENGL=Y \
+      -DWITH_OPENAL=Y \
+      -DWITH_ALLEGRO=N \
 
 # This one line sed command is easier than trying to muck with the Makefile
 # to add the proper -D definition.
@@ -79,8 +77,8 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%{_gamesbindir}/%{name}*
-%{_gamesdatadir}/%{name}
+%{_gamesbindir}/*
+%{_gamesdatadir}/*
 %{_datadir}/applications/*.desktop
 %doc docs/*.log docs/gnu.txt docs/vavoom.txt
 
