@@ -1,6 +1,6 @@
 %define	name	vavoom
 %define	version	1.28
-%define	release %mkrel 1
+%define	release %mkrel 2
 %define	Summary	Open source port of the DOOM game engine
 
 Summary:	%{Summary}
@@ -18,7 +18,7 @@ Group:		Games/Arcade
 License:	GPLv2+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel SDL_mixer-devel SDL_net-devel libpng-devel allegro-devel
-BuildRequires:	oggvorbis-devel libmad-devel openal-devel libmikmod-devel
+BuildRequires:	oggvorbis-devel libmad-devel openal-devel libmikmod-devel libwx_base-devel
 BuildRequires:	cmake desktop-file-utils mesagl-devel libjpeg-devel
 Enhances:	vavoom-vmdl TiMidity++
 
