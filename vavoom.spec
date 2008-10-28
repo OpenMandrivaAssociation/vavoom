@@ -19,7 +19,7 @@ License:	GPLv2+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel SDL_mixer-devel SDL_net-devel libpng-devel allegro-devel
 BuildRequires:	oggvorbis-devel libmad-devel openal-devel libmikmod-devel
-BuildRequires:	desktop-file-utils mesagl-devel libjpeg-devel
+BuildRequires:	cmake desktop-file-utils mesagl-devel libjpeg-devel
 Enhances:	vavoom-vmdl TiMidity++
 
 %description
