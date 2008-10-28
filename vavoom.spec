@@ -18,8 +18,8 @@ Group:		Games/Arcade
 License:	GPLv2+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel SDL_mixer-devel SDL_net-devel libpng-devel allegro-devel
-BuildRequires:	oggvorbis-devel libmad-devel openal-devel libmikmod-devel libwx_base-devel
-BuildRequires:	cmake desktop-file-utils mesagl-devel libjpeg-devel
+BuildRequires:	oggvorbis-devel libmad-devel openal-devel libmikmod-devel
+BuildRequires:	cmake desktop-file-utils mesagl-devel libjpeg-devel wxGTK-devel
 Enhances:	vavoom-vmdl TiMidity++
 
 %description
