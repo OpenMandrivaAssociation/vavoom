@@ -1,6 +1,6 @@
 %define	name	vavoom
-%define	version	1.28
-%define	release %mkrel 2
+%define	version	1.29
+%define	release %mkrel 1
 %define	Summary	Open source port of the DOOM game engine
 
 Summary:	%{Summary}
@@ -10,9 +10,9 @@ Release:	%{release}
 Source0:	http://dl.sourceforge.net/vavoom/%{name}-%{version}.tar.bz2
 #Patch0:		vavoom-1.20-openal-fix.patch
 #Patch1:		vavoom-1.21-x86_64.patch
-Patch2:		vavoom-c_linkage.patch
+#Patch2:		vavoom-c_linkage.patch
 #Patch3:		vavoom-missing_animated.lmp.patch
-Patch4:		vavoom-1.28-new-mikmod.patch
+#Patch4:		vavoom-1.28-new-mikmod.patch
 URL:		http://vavoom-engine.com/
 Group:		Games/Arcade
 License:	GPLv2+
@@ -31,9 +31,9 @@ and freelook support.
 %setup -q
 #%patch0 -p0 -b .openal
 #%patch1 -p1 -b .64bit
-%patch2 -p1 -b .linkage
+#%patch2 -p1 -b .linkage
 #%patch3 -p1 -b .ani
-%patch4 -p1
+#%patch4 -p1
 #rm configure
 #autoconf
 
