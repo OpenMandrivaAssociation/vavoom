@@ -1,3 +1,4 @@
+%define Werror_cflags	%nil
 %define	name	vavoom
 %define	version	1.32
 %define	release %mkrel 1
