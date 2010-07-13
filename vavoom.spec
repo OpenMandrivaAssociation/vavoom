@@ -29,7 +29,7 @@ and freelook support.
 %setup -q
 %patch0 -p0
 %patch1 -p0
-%patch2 -p1
+# %patch2 -p1
 # This one line sed command is easier than trying to muck with the Makefile
 # to add the proper -D definition.
 %{__sed} -i "s|#define FL_BASEDIR.*|#define FL_BASEDIR \"%{_gamesdatadir}/%{name}\"|" source/files.h
