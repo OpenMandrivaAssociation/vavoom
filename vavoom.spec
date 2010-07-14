@@ -36,7 +36,8 @@ and freelook support.
 %{__sed} -i "s|#define FL_BASEDIR.*|#define FL_BASEDIR \"%{_gamesdatadir}/%{name}\"|" source/files.h
 
 %build
-%cmake -DCMAKE_INSTALL_PREFIX=%{_gamesbindir} \
+%cmake -DCMAKE_INSTALL_PREFIX=%{_prefix} \
+	-DBINDIR=%{_gamesbindir} \
       -DDATADIR=%{_gamesdatadir} \
       -DWITH_SDL=Y \
       -DWITH_OPENGL=Y \
