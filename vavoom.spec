@@ -1,7 +1,7 @@
 %define Werror_cflags	%nil
 %define	name	vavoom
 %define	version	1.32
-%define	release %mkrel 1.1
+%define	release %mkrel 1.2
 %define	Summary	Open source port of the DOOM game engine
 
 Summary:	%{Summary}
@@ -38,7 +38,7 @@ and freelook support.
 %build
 %cmake -DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	-DBINDIR=%{_gamesbindir} \
-      -DDATADIR=%{_gamesdatadir} \
+      -DDATADIR=%{_gamesdatadir}/%{name} \
       -DWITH_SDL=Y \
       -DWITH_OPENGL=Y \
       -DWITH_OPENAL=Y \
