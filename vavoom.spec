@@ -1,7 +1,7 @@
 %define Werror_cflags	%nil
 %define	name	vavoom
 %define	version	1.32
-%define	release %mkrel 1
+%define	release %mkrel 1.1
 %define	Summary	Open source port of the DOOM game engine
 
 Summary:	%{Summary}
