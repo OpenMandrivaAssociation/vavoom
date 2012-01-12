@@ -5,6 +5,7 @@ Summary:	Open source port of the DOOM game engine
 Source0:	http://dl.sourceforge.net/vavoom/%{name}-%{version}.tar.bz2
 Patch0:		vavoom-1.30-linkage.patch
 Patch1:		vavoom-1.30-fix-str-fmt.patch
+Patch2:		vavoom-1.33-sfmt.patch
 URL:		http://vavoom-engine.com/
 Group:		Games/Arcade
 License:	GPLv2+
@@ -36,6 +37,7 @@ and freelook support.
 %setup -q
 %patch0 -p0
 %patch1 -p0
+%patch2 -p1
 # This one line sed command is easier than trying to muck with the Makefile
 # to add the proper -D definition.
 %__sed -i "s|#define FL_BASEDIR.*|#define FL_BASEDIR \"%{_gamesdatadir}/%{name}\"|" source/files.h
