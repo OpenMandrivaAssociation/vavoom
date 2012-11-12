@@ -1,0 +1,37 @@
+--- source/misc.cpp~	2008-07-23 20:41:26.000000000 +0000
++++ source/misc.cpp	2010-01-16 10:38:44.000000000 +0000
+@@ -197,7 +197,7 @@
+ 
+ void VLogSysError::Serialise(const char* V, EName)
+ {
+-	Sys_Error(V);
++	Sys_Error("%s",V);
+ }
+ 
+ //==========================================================================
+@@ -208,7 +208,7 @@
+ 
+ void VLogHostError::Serialise(const char* V, EName)
+ {
+-	Host_Error(V);
++	Host_Error("%s",V);
+ }
+ 
+ //==========================================================================
+--- source/vc_object.cpp~	2009-01-15 19:58:03.000000000 +0000
++++ source/vc_object.cpp	2010-01-16 10:40:46.000000000 +0000
+@@ -475,12 +475,12 @@
+ 
+ IMPLEMENT_FUNCTION(VObject, Error)
+ {
+-	Host_Error(*PF_FormatString());
++	Host_Error("%s",*PF_FormatString());
+ }
+ 
+ IMPLEMENT_FUNCTION(VObject, FatalError)
+ {
+-	Sys_Error(*PF_FormatString());
++	Sys_Error("%s",*PF_FormatString());
+ }
+ 
+ //**************************************************************************

@@ -1,0 +1,12 @@
+diff -urN vavoom-1.33/utils/vcc/vcc.cpp vavoom-1.33-patched/utils/vcc/vcc.cpp
+--- vavoom-1.33/utils/vcc/vcc.cpp	2010-04-22 00:15:40.000000000 +1100
++++ vavoom-1.33-patched/utils/vcc/vcc.cpp	2012-01-13 02:02:53.666234470 +1100
+@@ -122,7 +122,7 @@
+ 	}
+ 	catch (VException& e)
+ 	{
+-		FatalError(e.What());
++		FatalError("%s", e.What());
+ 	}
+ 	return 0;
+ }
