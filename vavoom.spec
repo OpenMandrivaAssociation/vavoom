@@ -83,3 +83,82 @@ desktop-file-install --vendor="" \
 %{_gamesbindir}/*
 %{_gamesdatadir}/*
 %{_datadir}/applications/*.desktop
+
+
+%changelog
+* Thu Jan 12 2012 Andrey Bondrov <abondrov@mandriva.org> 1.33-1mdv2012.0
++ Revision: 760443
+- Rebuild against utf8 wxGTK2.8, build with FLAC support
+
+  + Zombie Ryushu <ryushu@mandriva.org>
+    - Upgrade to 1.33
+
+* Wed Jul 14 2010 Zombie Ryushu <ryushu@mandriva.org> 1.32-1.2mdv2011.0
++ Revision: 553334
+- fix datadir location
+
+* Wed Jul 14 2010 Zombie Ryushu <ryushu@mandriva.org> 1.32-1.1mdv2011.0
++ Revision: 553332
+- fix bindir location
+- fix bindir location
+
+* Tue Jul 13 2010 Zombie Ryushu <ryushu@mandriva.org> 1.32-1mdv2011.0
++ Revision: 551960
+- Upgrade to 1.32 Fix cmake
+- Upgrade to 1.32 Fix cmake
+- Upgrade to 1.32
+- Upgrade to 1.32
+
+* Sat Jan 16 2010 Funda Wang <fwang@mandriva.org> 1.30-1mdv2010.1
++ Revision: 492186
+- add patch to have it built correctly
+
+* Mon Feb 23 2009 Zombie Ryushu <ryushu@mandriva.org> 1.30-1mdv2009.1
++ Revision: 344256
+- New version 1.30
+
+* Tue Nov 11 2008 Zombie Ryushu <ryushu@mandriva.org> 1.29-1mdv2009.1
++ Revision: 302018
+- Update to version 1.29, Linkage patches are deprecated.
+- Initial Import from Fedora
+
+* Wed Oct 29 2008 Stéphane Téletchéa <steletch@mandriva.org> 1.28-2mdv2009.1
++ Revision: 298117
+- add missing buildrequires
+- Update to 1.28
+- Adapt to the cmake system, and adjut the parameters accordingly
+
+* Thu Aug 14 2008 Götz Waschk <waschk@mandriva.org> 1.22.1-5mdv2009.0
++ Revision: 271881
+- patch for new mikmod
+- update license
+
+* Sun Aug 03 2008 Thierry Vignaud <tv@mandriva.org> 1.22.1-4mdv2009.0
++ Revision: 261832
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 1.22.1-3mdv2009.0
++ Revision: 255287
+- rebuild
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Mon Dec 17 2007 Thierry Vignaud <tv@mandriva.org> 1.22.1-1mdv2008.1
++ Revision: 128866
+- kill re-definition of %%buildroot on Pixel's request
+- kill explicit icon extension
+- kill desktop-file-validate's 'warning: key "Encoding" in group "Desktop Entry" is deprecated'
+
+
+* Mon Jan 22 2007 Per Øyvind Karlsen <pkarlsen@mandriva.com> 1.22.1-1mdv2007.0
++ Revision: 111803
+- fix buildrequires
+- new release: 1.22.1
+  some patches from Zombie
+  fix xdg menu
+- Import vavoom
+
+* Thu Aug 03 2006 Per Øyvind Karlsen <pkarlsen@mandriva.com> 1.21.1-1mdv2007.0
+- initial mandriva release based on fedora package
+
