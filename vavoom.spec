@@ -1,6 +1,6 @@
 Name:		vavoom
 Version:	1.33
-Release:	%mkrel 1
+Release:	2
 Summary:	Open source port of the DOOM game engine
 Source0:	http://dl.sourceforge.net/vavoom/%{name}-%{version}.tar.bz2
 Patch0:		vavoom-1.30-linkage.patch
